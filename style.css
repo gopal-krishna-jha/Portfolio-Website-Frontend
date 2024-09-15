@@ -77,6 +77,7 @@ a{
     margin: 4rem auto;
     padding: 0 1rem;
     padding-bottom: 8rem;
+    margin-left: 10%;
 }
 
 .faded-text{
@@ -84,7 +85,7 @@ a{
     font-size: 7em;
     color: rgb(231, 231, 231);
     bottom: -16%;
-    left: -5%;
+    left: -1%;
     font-weight: bold;
     transition: all 3s; 
 }
@@ -100,6 +101,7 @@ a{
     font-size: 35px;
     color: #343d68;
     font-weight: 500;
+  
 }
 
 .role{
@@ -116,6 +118,7 @@ a{
     margin-top: 1rem;
     width: 70px;
     font-weight: 500;
+    
 }
 
 .btn-pink {
@@ -168,4 +171,137 @@ position: absolute;
     filter: grayscale(1);
     transition: all 1s;
     animation: scaleImage 5s linear infinite;
+}
+
+.user-image img{
+    z-index: -9;
+}
+
+@keyframes scaleImage {
+
+    0%{
+        filter: grayscale(1);
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.1);
+        filter: grayscale(0);
+        box-shadow: 3px 3px 5px black;
+    }
+
+    100%{
+        transform: scale(1);
+        filter: grayscale(1);
+    }
+    
+}
+
+.icon-dots{
+    z-index: 9;
+    bottom: -1rem;
+    right: 0;
+    animation-name: dotsanimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes dotsanimation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+         transform: translateY(0px);
+    }
+    
+}
+
+.icon-cube{
+    z-index: 9;
+    top: -0.8em;
+    right: 1em;
+    animation-name: cubeROtate;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cubeROtate {
+    0%{
+        transform: translateY(0px) rotateY(0deg);
+
+    }
+    50%{
+        transform: translateY(-15px)  rotateY(180deg);
+    }
+    100%{
+        transform: translateY(0% ) rotateY(360deg);
+        
+    }
+}
+
+.icon-circle{
+    z-index: 9;
+    left: 0;
+    bottom: 0;
+    animation-name: circleAnimation;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes circleAnimation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+         transform: translateY(0px);
+    }
+    
+}
+
+.icon-zigzak{
+    z-index: 9;
+    top: 1.5em;
+    left: -0.3em;
+    animation-name: zigzigAnimation;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes zigzigAnimation {
+    
+    50%{
+        left: 5%;
+        top: 2%;
+    }
+    
+    
+}
+
+
+.icon-plus{
+    z-index: 9;
+    top:-0.8rem;
+    left: 50%;
+    animation-name: iconAnimation;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+}
+
+@keyframes iconAnimation {
+  
+    50%{
+        top: 3%;
+        left: 48% ;
+    }
+    
+    
 }
